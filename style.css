@@ -1,0 +1,110 @@
+:root {
+    --neon-green: #39ff14;
+    --neon-blue: #00d4ff;
+    --neon-red: #ff3131;
+    --bg-dark: #0f172a;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: radial-gradient(circle, #1e293b 0%, #0f172a 100%);
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    touch-action: manipulation;
+}
+
+.header {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 15px 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-blue);
+    letter-spacing: 4px;
+}
+
+.score-board {
+    font-size: 1.2rem;
+    color: var(--neon-green);
+    font-weight: bold;
+}
+
+#gameCanvas {
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
+}
+
+.ui-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 25px;
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    gap: 10px;
+}
+
+.btn {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 22px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:active {
+    background: var(--neon-blue);
+    transform: scale(0.9);
+}
+
+#pauseBtn {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--neon-green);
+    color: black;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 20px var(--neon-green);
+    transition: 0.3s;
+}
+
+#pauseBtn.paused {
+    background: var(--neon-red);
+    box-shadow: 0 0 20px var(--neon-red);
+    color: white;
+}
+
+.footer-hint {
+    margin-top: 15px;
+    color: #64748b;
+    font-size: 0.8rem;
+}
+
+#up { grid-column: 2; }
+#left { grid-column: 1; }
+#down { grid-column: 2; }
+#right { grid-column: 3; }

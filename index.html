@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Nik-Snake-Pro </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">
+        <h1>SNAKE PRO</h1>
+        <div id="playerNameTag" style="color: #00d4ff; font-size: 1.1rem; margin-bottom: 5px;"></div>
+        <div class="score-board">Score: <span id="score">0</span></div>
+    </div>
+
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+    <div class="ui-section">
+        <div class="controls">
+            <button class="btn" id="up" onclick="changeDir('UP')">↑</button>
+            <button class="btn" id="left" onclick="changeDir('LEFT')">←</button>
+            <button class="btn" id="down" onclick="changeDir('DOWN')">↓</button>
+            <button class="btn" id="right" onclick="changeDir('RIGHT')">→</button>
+        </div>
+
+        <button id="pauseBtn" onclick="togglePause()">PLAY</button>
+    </div>
+
+    <p class="footer-hint">Tip: Spacebar se bhi Pause/Play kar sakte hain | Developed By ❤️ <b>Nikhil Misal</b> </p>
+
+    <script src="script.js"></script>
+</body>
+</html>
